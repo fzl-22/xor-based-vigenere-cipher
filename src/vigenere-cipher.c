@@ -1,7 +1,14 @@
+/*
+header source file dari vigenere-cipher
+*/
+
 #include <stddef.h>
 #include <string.h>
 #include <stdio.h>
 
+/*
+fungsi untuk melakukan enkripsi dan dekripsi pada [input_str] menggunakan [key_str], menghasilkan [output_str]
+*/
 void vigenere_cipher(char *input_str, char* key_str, char *output_str){
   size_t input_len = strlen(input_str);
   size_t key_len = strlen(key_str);
@@ -13,6 +20,9 @@ void vigenere_cipher(char *input_str, char* key_str, char *output_str){
   output_str[input_len] = '\0';
 }
 
+/*
+  fungsi untuk mencetak setiap karakter pada [str] dalam format char, decimal, dan binary beserta tambahan [prefix] 
+*/
 void print_string_info(char* prefix, char *str) {
     size_t str_len = strlen(str);
 
