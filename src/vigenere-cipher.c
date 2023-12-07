@@ -1,5 +1,6 @@
 #include <stddef.h>
 #include <string.h>
+#include <stdio.h>
 
 void vigenere_cipher(char *input_str, char* key_str, char *output_str){
   size_t input_len = strlen(input_str);
@@ -16,7 +17,7 @@ void print_string_info(char* prefix, char *str) {
     size_t str_len = strlen(str);
 
     printf("%s:\n", prefix);
-    printf("Char\tInteger\tBinary\n");
+    printf("Char\tDecimal\tBinary\n");
 
     for (size_t i = 0; i < str_len; i++) {
         printf("%c\t%d\t", str[i], (int)str[i]);
